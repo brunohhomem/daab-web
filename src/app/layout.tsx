@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'DAAB Perícias',
-  description: 'Equipe de perítos e assistentes técnicos a sua disposição'
+  description: 'Equipe de peritos e assistentes técnicos a sua disposição'
 }
 
 export default function RootLayout({
@@ -25,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 text-gray-950 relative pt-20 flex flex-col min-h-screen`}
       >
-        {children}
+        <main className="flex-grow">{children}</main>
       </body>
     </html>
   )
