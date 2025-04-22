@@ -4,7 +4,7 @@ import logo from '../../public/logo.png'
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <div className="">
+      <div className="m-20">
         <Image src={logo} alt="Logo" sizes="20" suppressHydrationWarning />
       </div>
       <h1>
