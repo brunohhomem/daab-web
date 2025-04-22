@@ -7,12 +7,10 @@ export default function Home() {
       <div className="m-20">
         <Image src={logo} alt="Logo" sizes="20" suppressHydrationWarning />
       </div>
-      <h1>
+      <h1 className="text-zinc-700 text-2xl font-bold tracking-tight mb-4">
         DEBORAH APARECIDA ASSAD BAZO: EQUIPE DE PERITOS e ASSISTENTES TÉCNICOS À
         SUA DISPOSIÇÃO
       </h1>
-      <h2>🚧 Em desenvolvimento 🚧</h2>
-      <h3>@brunohhomem</h3>
     </main>
   )
 }
