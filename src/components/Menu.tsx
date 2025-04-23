@@ -8,7 +8,7 @@ const menuItems = [
   { name: 'Início', href: '/' },
   { name: 'Sobre', href: '/about' },
   { name: 'Serviços', href: '/services' },
-  { name: 'Contato', href: '/portfolio' }
+  { name: 'Contato', href: '/contact' }
 ]
 
 export function Menu() {
