@@ -1,10 +1,10 @@
 import About from '@/components/About'
-import Intro from '@/components/Intro'
+import Hero from '@/components/Hero'
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
-      <Intro />
+      <Hero />
       <About />
     </main>
   )
