@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="mt-5 px-4 text-center text-gray-500">
+    <footer className="mt-10 px-4 text-center text-gray-500">
       <p>
         <span>
           Grafotécnica, Documentoscopia, Identificação de Áudio e Imagens,
