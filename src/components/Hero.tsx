@@ -4,7 +4,7 @@ import logo from '../../public/logo.png'
 export default function Hero() {
   return (
     <section
-      id="home"
+      id="hero"
       className="flex flex-col items-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]"
     >
       <div className="m-20">
