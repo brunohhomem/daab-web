@@ -1,4 +1,5 @@
 import About from '@/components/About'
+import Contact from '@/components/Contact'
 import Divider from '@/components/Divider'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
@@ -12,6 +13,7 @@ export default function Home() {
       <Divider />
       <Services />
       <Divider />
+      <Contact />
     </main>
   )
 }

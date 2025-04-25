@@ -2,64 +2,87 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-20"
+      className="flex flex-col items-center max-w-[50rem] scroll-mt-20"
     >
-      <h2 className="text-zinc-700 text-2xl font-bold tracking-tight mb-4 text-center">
-        Sobre Nós
-      </h2>
-      <div className="flex flex-col items-center gap-5 text-justify">
-        <p>
-          Com mais de <strong>20 anos de experiência em perícia técnica</strong>
-          , a <strong>DAAB Perícias</strong> foi fundada por{' '}
-          <strong>Deborah Aparecida Assad Bazo</strong>, especialista em{' '}
-          <em>Grafotécnica</em> e <em>Documentoscopia</em> pela USP. Desde o
-          início, nossa missão tem sido oferecer{' '}
-          <strong>laudo pericial digital</strong> de alto padrão científico,
-          aplicando metodologias validadas e tecnologia de ponta para cada
-          análise.
+      <h2 className="text-2xl font-bold mb-10">Sobre Nós</h2>
+
+      <div className="flex flex-col items-center gap-6 text-justify">
+        <p className="leading-relaxed">
+          Com mais de{' '}
+          <strong className="text-primary">
+            20 anos de experiência em perícia técnica
+          </strong>
+          , a <strong className="text-primary">DAAB Perícias</strong> foi
+          fundada por{' '}
+          <strong className="text-primary">Deborah Aparecida Assad Bazo</strong>
+          , especialista em <em>Grafotécnica</em> e <em>Documentoscopia</em>{' '}
+          pela USP. Desde o início, nossa missão tem sido oferecer{' '}
+          <strong className="text-primary">laudo pericial digital</strong> de
+          alto padrão científico, aplicando metodologias validadas e tecnologia
+          de ponta para cada análise.
         </p>
-        <p className="">
-          Inspirada pela paixão por investigação e pelo compromisso com a{' '}
-          <strong>verdade técnica</strong>, Deborah reuniu uma equipe
-          multidisciplinar de peritos em áreas como{' '}
-          <strong>perícia forense digital no Brasil</strong>,{' '}
-          <strong>joalheria e gemologia</strong>,{' '}
-          <strong>identificação de áudio e imagens</strong> e{' '}
-          <strong>perícia ambiental online</strong>. Cada projeto é tratado com
-          rigor, confidencialidade e agilidade — assegurando resultados sólidos
-          para processos judiciais, corporativos e administrativos.
-        </p>
-        <p className="flex flex-col h-full w-full">
-          Ao escolher a DAAB Perícias, você conta com:
-          <ul>
-            <li>
-              <strong>Laudo pericial digital</strong> e{' '}
-              <strong>emissão de laudo pericial confidencial</strong>
-            </li>
-            <li>
-              <strong>Perícia técnica online</strong> e{' '}
-              <strong>análise de documentos periciais online</strong>
-            </li>
-            <li>
-              <strong>Perícia grafotécnica no Brasil</strong> e{' '}
-              <strong>autenticação de obras de arte</strong>
-            </li>
-            <li>
-              <strong>Consultoria em merceologia Brasil</strong> e relatórios de{' '}
-              <strong>perícia ambiental online</strong>
-            </li>
-            <li>
-              <strong>Reconstrução de acidentes de trânsito</strong> e suporte
-              em <strong>acidentes de trânsito</strong>
-            </li>
+
+        <div className="w-full p-6 bg-primary/5 rounded-lg border-l-4 border-primary">
+          <p className="leading-relaxed">
+            Inspirada pela paixão por investigação e pelo compromisso com a{' '}
+            <strong className="text-primary">verdade técnica</strong>, Deborah
+            reuniu uma equipe multidisciplinar de peritos em áreas como{' '}
+            <strong className="text-primary">
+              perícia forense digital no Brasil
+            </strong>
+            ,<strong className="text-primary"> joalheria e gemologia</strong>,{' '}
+            <strong className="text-primary">
+              identificação de áudio e imagens
+            </strong>{' '}
+            e <strong className="text-primary">perícia ambiental online</strong>
+            . Cada projeto é tratado com rigor, confidencialidade e agilidade —
+            assegurando resultados sólidos para processos judiciais,
+            corporativos e administrativos.
+          </p>
+        </div>
+
+        <div className="w-full">
+          <h3 className="text-xl font-semibold mb-4 text-primary">
+            Ao escolher a DAAB Perícias, você conta com:
+          </h3>
+          <ul className="space-y-3">
+            {[
+              'Laudo pericial digital e emissão de laudo pericial confidencial',
+              'Perícia técnica online e análise de documentos periciais online',
+              'Perícia grafotécnica no Brasil e autenticação de obras de arte',
+              'Consultoria em merceologia Brasil e relatórios de perícia ambiental online',
+              'Reconstrução de acidentes de trânsito e suporte em acidentes de trânsito'
+            ].map((item, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-accent mr-2 mt-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="navy"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
-        </p>
-        <p>
+        </div>
+
+        <p className="leading-relaxed bg-gradient-to-r from-primary/10 to-transparent p-4 rounded-lg">
           Nossa atuação, presencial e remota, permite atender clientes em todo o
-          Brasil, garantindo <strong>perícia técnica online</strong> ou
-          presencial, com total segurança e compliance à <strong>LGPD</strong>.
-          Descubra como podemos ajudar a esclarecer questões complexas e
-          proteger seus direitos com excelência técnica.
+          Brasil, garantindo{' '}
+          <strong className="text-primary">perícia técnica online</strong> ou
+          presencial, com total segurança e compliance à{' '}
+          <strong className="text-primary">LGPD</strong>. Descubra como podemos
+          ajudar a esclarecer questões complexas e proteger seus direitos com
+          excelência técnica.
         </p>
       </div>
     </section>
