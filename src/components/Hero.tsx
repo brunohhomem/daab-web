@@ -6,10 +6,8 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center max-w-[60rem] py-16 sm:py-24 scroll-mt-20 relative"
+      className="flex flex-col items-center max-w-[60rem] py-12 sm:py-16 scroll-mt-20 -mb-12"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent -z-10 rounded-3xl"></div>
-
       <Image
         src={logo}
         alt="DAAB Perícias Logo"
@@ -22,7 +20,7 @@ export default function Hero() {
       <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center text-primary">
         Deborah Aparecida Assad Bazo
         <span className="block text-2xl md:text-3xl mt-2 text-text-secondary">
-          Excelência em Perícias Técnicas
+          Excelência em Perícia e Assistência Técnica
         </span>
       </h1>
 
@@ -35,7 +33,9 @@ export default function Hero() {
 
       <div className="mt-10 flex gap-4">
         <a href="#services">
-          <Button>Nossos Serviços</Button>
+          <Button className="bg-blue-950 hover:bg-amber-400">
+            Nossos Serviços
+          </Button>
         </a>
         <a href="#contact">
           <Button variant={'outline'}>Entre em Contato</Button>

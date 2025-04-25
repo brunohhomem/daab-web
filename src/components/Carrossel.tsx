@@ -2,6 +2,7 @@
 
 import { useState, useEffect, SetStateAction } from 'react'
 import { servicesData } from '../lib/data'
+import { Button } from './ui/button'
 
 export default function Carrossel() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -77,8 +78,13 @@ export default function Carrossel() {
             <p className="text-text-secondary leading-relaxed mb-6">
               {service.description}
             </p>
-            <a href="#contact" className="btn btn-primary self-start mt-auto">
-              Solicitar Serviço
+            <a href="#contact" className="self-start mt-auto">
+              <Button
+                variant="destructive"
+                className="bg-blue-950 hover:bg-amber-400"
+              >
+                Solicitar Serviço
+              </Button>
             </a>
           </div>
         </div>

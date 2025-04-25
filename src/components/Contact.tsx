@@ -140,6 +140,7 @@ export default function Contact() {
                 <option>Merceologia</option>
                 <option>Perícia Ambiental</option>
                 <option>Acidentes de Trânsito</option>
+                <option>Outros</option>
               </select>
             </div>
 
@@ -148,7 +149,7 @@ export default function Contact() {
               <textarea className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"></textarea>
             </div>
 
-            <Button className="px-4 py-2 rounded-md transition-all duration-200 font-semibold w-full">
+            <Button className="bg-blue-950 hover:bg-amber-400 px-4 py-2 rounded-md transition-all duration-200 font-semibold w-full">
               Enviar Solicitação
             </Button>
           </div>

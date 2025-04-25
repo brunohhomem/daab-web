@@ -19,9 +19,9 @@ export const links = [
 
 export const servicesData = [
   {
-    title: 'Grafotécnica & Documentoscopia',
+    title: 'Grafotécnica, Documentoscopia & Contratos Digitais',
     description:
-      'Análise de assinaturas e documentos, detecção de fraudes e falsificações com tecnologia avançada e metodologia científica.',
+      'Análise de assinaturas, documentos e contratos digitais. Detecção de fraudes e falsificações com tecnologia avançada e metodologia científica.',
     image: '/documents.jpg'
   },
   {
@@ -64,6 +64,6 @@ export const servicesData = [
     title: 'Acidentes de Trânsito',
     description:
       'Reconstrução de sinistros e perícia de dinâmica de acidentes utilizando tecnologia 3D e simulações computadorizadas.',
-    image: '/work.jpg'
+    image: '/transito.jpg'
   }
 ] as const
