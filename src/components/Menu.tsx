@@ -5,10 +5,10 @@ import { useState } from 'react'
 import { MenuIcon, X } from 'lucide-react'
 
 const menuItems = [
-  { name: 'Início', href: '/' },
-  { name: 'Sobre', href: '/about' },
-  { name: 'Serviços', href: '/services' },
-  { name: 'Contato', href: '/contact' }
+  { name: 'Início', href: '#hero' },
+  { name: 'Sobre', href: '#about' },
+  { name: 'Serviços', href: '#services' },
+  { name: 'Contato', href: '#contact' }
 ]
 
 export function Menu() {

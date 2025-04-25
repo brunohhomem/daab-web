@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-col items-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]"
+      className="flex flex-col items-center mb-28 max-w-[50rem] sm:mb-0 scroll-mt-20"
     >
       <h2 className="text-zinc-700 text-2xl font-bold tracking-tight mb-4 text-center">
         Sobre Nós

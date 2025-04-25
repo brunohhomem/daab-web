@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="flex flex-col items-center max-w-[60rem] sm:mb-0 scroll-mt-[100rem]"
+      className="flex flex-col items-center max-w-[60rem] sm:mb-0 scroll-mt-20"
     >
       <div className="m-20">
         <Image src={logo} alt="Logo" sizes="20" suppressHydrationWarning />
