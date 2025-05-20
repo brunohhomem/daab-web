@@ -1,7 +1,6 @@
 import Image from 'next/image'
-
-import instagram from '../../public/instagram.svg'
 import { Instagram } from 'lucide-react'
+import whatsapp from '../../public/whatsapp.svg'
 
 export default function Footer() {
   return (
@@ -18,13 +17,27 @@ export default function Footer() {
                 confidencialidade e entrega ágil.
               </p>
             </div>
-            <div>
+            <div className='flex justify-center align-middle items-center mt-4 gap-4'>
               <a
                 href="https://www.instagram.com/daabpericias1/"
                 target="_blank"
               >
-                <Instagram className="size-10 mt-4" />
+                <Instagram className="size-10" />
               </a>
+                <a
+                  href="https://wa.me/+551199405478?text=Olá, ví seu site e gostaria de mais informações sobre seus serviços"
+                  className="flex gap-2"
+                  target='_blank'
+                >
+                <Image
+                  src={whatsapp}
+                  alt="Whatsapp"
+                  width={40}
+                  height={40}
+                  suppressHydrationWarning
+                />
+                </a>
+              
             </div>
           </div>
 
@@ -32,7 +45,22 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-4 text-accent">Contato</h3>
             <ul className="space-y-2 text-white/80">
               <li>Email: contato@daab.com.br</li>
-              <li>Telefone: (11) 99940-5478</li>
+              <li>Telefone: 
+                <a
+                  href="https://wa.me/+551199405478?text=Olá, ví seu site e gostaria de mais informações sobre seus serviços"
+                  className="flex gap-2"
+                  target='_blank'
+                >
+                  (11) 99940-5478
+                <Image
+                  src={whatsapp}
+                  alt="Whatsapp"
+                  width={20}
+                  height={20}
+                  className="mb-5"
+                  suppressHydrationWarning
+                />
+                </a></li>
               <li>São Paulo - SP</li>
             </ul>
           </div>

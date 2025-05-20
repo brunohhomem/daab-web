@@ -1,6 +1,34 @@
+"use client"
+
+import { useRef } from 'react'
+import emailjs from '@emailjs/browser'
 import { Button } from './ui/button'
+import Image from 'next/image'
+import whatsapp from '../../public/whatsapp.svg'
 
 export default function Contact() {
+  const form = useRef<HTMLFormElement>(null)
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (!form.current) return
+
+    const serviceId = 'service_9nbbbuk'
+    const templateId = 'template_inmy07e'
+    const publicKey = 'SHlfC4uD6MrqVVz5H'
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+        console.log(result.text)
+        alert('Mensagem enviada com sucesso!')
+        form.current?.reset()
+      }, (error) => {
+        console.log(error.text)
+        alert('Ocorreu um erro ao enviar a mensagem. Tente novamente.')
+      })
+  }
+
   return (
     <section
       id="contact"
@@ -36,7 +64,7 @@ export default function Contact() {
                 <p className="font-medium">Email</p>
                 <a
                   href="mailto:contato@daab.com.br"
-                  className="text-primary hover:text-accent transition-colors"
+                  className="text-primary hover:text-blue-950 transition-colors"
                 >
                   contato@daab.com.br
                 </a>
@@ -62,11 +90,21 @@ export default function Contact() {
               <div>
                 <p className="font-medium">Telefone</p>
                 <a
-                  href="tel:+551199405478"
-                  className="text-primary hover:text-accent transition-colors"
+                  href="https://wa.me/+551199405478?text=Olá, ví seu site e gostaria de mais informações sobre seus serviços"
+                  className="text-primary hover:text-blue-950 transition-colors flex gap-2 align-middle justify-center"
+                  target='_blank'
                 >
                   (11) 99940-5478
+                <Image
+                  src={whatsapp}
+                  alt="Whatsapp"
+                  width={20}
+                  height={20}
+                  className="mb-5"
+                  suppressHydrationWarning
+                />
                 </a>
+
               </div>
             </div>
 
@@ -100,36 +138,44 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="bg-card rounded-lg border border-border p-6 transition-all duration-300 shadow-md">
-          <h3 className="text-xl font-semibold mb-4">Solicite um Orçamento</h3>
-          <p className="mb-6">
-            Preencha o formulário abaixo e entraremos em contato em até 24
-            horas.
-          </p>
+      <div className="bg-card rounded-lg border border-border p-6 transition-all duration-300 shadow-md">
+        <h3 className="text-xl font-semibold mb-4">Solicite um Orçamento</h3>
+        <p className="mb-6">
+          Preencha o formulário abaixo e entraremos em contato em até 24
+          horas.
+        </p>
 
-          <div className="space-y-4">
-            <div className="flex flex-col">
-              <label className="text-sm font-medium mb-1">Nome</label>
-              <input
-                type="text"
-                className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
-              />
-            </div>
+        <form ref={form} onSubmit={sendEmail} className="space-y-4">
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1">Nome</label>
+            <input
+              type="text"
+              name="user_name"
+              required
+              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+            />
+          </div>
 
-            <div className="flex flex-col">
-              <label className="text-sm font-medium mb-1">Email</label>
-              <input
-                type="email"
-                className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
-              />
-            </div>
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1">Email</label>
+            <input
+              type="email"
+              name="user_email"
+              required
+              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+            />
+          </div>
 
-            <div className="flex flex-col">
-              <label className="text-sm font-medium mb-1">
-                Serviço de Interesse
-              </label>
-              <select className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md">
-                <option className="text-sm font-medium mb-1">
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1">
+              Serviço de Interesse
+            </label>
+            <select 
+              name="service"
+              required
+              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+            >
+              <option className="text-sm font-medium mb-1">
                   Selecione um serviço
                 </option>
                 <option>Grafotécnica & Documentoscopia</option>
@@ -141,19 +187,26 @@ export default function Contact() {
                 <option>Perícia Ambiental</option>
                 <option>Acidentes de Trânsito</option>
                 <option>Outros</option>
-              </select>
-            </div>
-
-            <div className="flex flex-col">
-              <label className="text-sm font-medium mb-1">Mensagem</label>
-              <textarea className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"></textarea>
-            </div>
-
-            <Button className="bg-blue-950 hover:bg-amber-400 px-4 py-2 rounded-md transition-all duration-200 font-semibold w-full">
-              Enviar Solicitação
-            </Button>
+            </select>
           </div>
-        </div>
+
+          <div className="flex flex-col">
+            <label className="text-sm font-medium mb-1">Mensagem</label>
+            <textarea 
+              name="message"
+              required
+              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+            ></textarea>
+          </div>
+
+          <Button 
+            type="submit"
+            className="bg-blue-950 hover:bg-amber-400 px-4 py-2 rounded-md transition-all duration-200 font-semibold w-full"
+          >
+            Enviar Solicitação
+          </Button>
+        </form>
+      </div>
       </div>
     </section>
   )
