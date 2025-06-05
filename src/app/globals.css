@@ -45,7 +45,7 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
-  --card: oklch(1 0 0);
+  --card: oklch(87.2% 0.01 258.338);
   --card-foreground: oklch(0.13 0.028 261.692);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
@@ -114,7 +114,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
+  .card {
+    @apply bg-card rounded-lg border border-border p-6 transition-all duration-300;
+    box-shadow: var(--shadow-md);
+  }
+
 }
