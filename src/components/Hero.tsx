@@ -25,7 +25,7 @@ export default function Hero() {
       </h1>
 
       <h2 className="text-xl text-text-secondary text-center max-w-2xl leading-relaxed">
-        Laudos e pareceres periciais com{' '}
+        Laudos e Pareceres técnicos com{' '}
         <span className="text-primary font-semibold">rigor científico</span>,
         <span className="text-primary font-semibold"> confidencialidade</span> e
         <span className="text-primary font-semibold"> entrega ágil</span>.
@@ -33,12 +33,12 @@ export default function Hero() {
 
       <div className="mt-10 flex gap-4">
         <a href="#services">
-          <Button className="bg-blue-950 hover:bg-amber-400">
+          <Button className="bg-blue-950 shadow-accent-foreground cursor-pointer hover:bg-amber-400">
             Nossos Serviços
           </Button>
         </a>
         <a href="#contact">
-          <Button variant={'outline'}>Entre em Contato</Button>
+          <Button variant={'outline'} className='border-1 border-black shadow-accent-foreground cursor-pointer'>Entre em Contato</Button>
         </a>
       </div>
     </section>

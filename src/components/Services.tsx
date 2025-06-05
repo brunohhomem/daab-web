@@ -11,8 +11,7 @@ export default function Services() {
       <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 p-4 rounded-lg mb-8 text-center">
         <p className="italic text-text-secondary">
           <span className="text-primary font-semibold">Em breve:</span> Cursos e
-          Workshops – Cadastre-se na lista de espera dos nossos Cursos em
-          Perícias Técnicas.
+          Workshops – Cadastre-se na lista de espera dos nossos Cursos.
         </p>
       </div>
 

@@ -27,13 +27,13 @@ export const servicesData = [
   {
     title: 'Identificação de Áudio & Imagens',
     description:
-      'Transcrição multilingue, reconhecimento de locutor e decodificação de mídias utilizando técnicas forenses de última geração.',
+      'Transcrição, reconhecimento de voz e face, verificação de imagens (CFTV) para análise de velocidade e decodificação de mídias utilizando técnicas forenses de última geração.',
     image: '/audiovideo.jpg'
   },
   {
     title: 'Joalheria & Gemologia',
     description:
-      'Laudos em pedras preciosas, certificação de gemas sintéticas e perícias ambientais no setor joalheiro com precisão e confiabilidade.',
+      'Laudos em pedras preciosas, certificação de gemas e perícias ambientais no setor joalheiro com precisão e confiabilidade.',
     image: '/earrings.jpg'
   },
   {
@@ -51,8 +51,8 @@ export const servicesData = [
   {
     title: 'Merceologia',
     description:
-      'Perícia em alimentos e produtos de consumo, análise de qualidade e conformidade ANVISA para garantir a segurança e qualidade dos produtos.',
-    image: '/food.jpg'
+      'Perícias em bens imóveis, marcas, patentes, valoração e autenticidade de peças de grife.',
+    image: '/iate.jpg'
   },
   {
     title: 'Perícia Ambiental',

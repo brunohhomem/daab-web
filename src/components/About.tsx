@@ -10,14 +10,13 @@ export default function About() {
         <p className="leading-relaxed">
           Com mais de{' '}
           <strong className="text-primary">
-            20 anos de experiência em perícia técnica
+            20 anos de experiência em Perícias e Pareceres Técnicos
           </strong>
           , a <strong className="text-primary">DAAB Perícias</strong> foi
           fundada por{' '}
           <strong className="text-primary">Deborah Aparecida Assad Bazo</strong>
-          , especialista em <em>Grafotécnica</em> e <em>Documentoscopia</em>{' '}
-          pela USP. Desde o início, nossa missão tem sido oferecer{' '}
-          <strong className="text-primary">laudo pericial digital</strong> de
+          , especialista em <em> Acidentes de Trânsito, Áudio e Imagens, Bens de luxo (Merceologia), Computação Forense, Contratos Digitais, Documentoscopia, Grafotécnica, Gemologia e Geociências, Identificação de I.A e Fake News, Identificação Humana Forense, Leitura Labial, Leitura Comportamental e Psicologia</em>. Desde o início, nossa missão tem sido oferecer{' '}
+          <strong className="text-primary">laudo pericial</strong> de
           alto padrão científico, aplicando metodologias validadas e tecnologia
           de ponta para cada análise.
         </p>
@@ -26,16 +25,7 @@ export default function About() {
           <p className="leading-relaxed">
             Inspirada pela paixão por investigação e pelo compromisso com a{' '}
             <strong className="text-primary">verdade técnica</strong>, Deborah
-            reuniu uma equipe multidisciplinar de peritos em áreas como{' '}
-            <strong className="text-primary">
-              perícia forense digital no Brasil
-            </strong>
-            ,<strong className="text-primary"> joalheria e gemologia</strong>,{' '}
-            <strong className="text-primary">
-              identificação de áudio e imagens
-            </strong>{' '}
-            e <strong className="text-primary">perícia ambiental online</strong>
-            . Cada projeto é tratado com rigor, confidencialidade e agilidade —
+            reuniu uma equipe multidisciplinar de peritos nas áreas mencionadas, e cada projeto é tratado com rigor, confidencialidade e agilidade —
             assegurando resultados sólidos para processos judiciais,
             corporativos e administrativos.
           </p>
@@ -47,11 +37,11 @@ export default function About() {
           </h3>
           <ul className="space-y-3">
             {[
-              'Laudo pericial digital e emissão de laudo pericial confidencial',
-              'Perícia técnica online e análise de documentos periciais online',
-              'Perícia grafotécnica no Brasil e autenticação de obras de arte',
-              'Consultoria em merceologia Brasil e relatórios de perícia ambiental online',
-              'Reconstrução de acidentes de trânsito e suporte em acidentes de trânsito'
+              'Atendimento e análises online',
+              'Laudo pericial e parecer técnico de excelência e qualidade',
+              'Perícia grafotécnica no Brasil e América Latina.',
+              'Perícia, consultoria e relatórios com entrega dentro do prazo',
+              'Valores acessíveis e facilitados'
             ].map((item, index) => (
               <li key={index} className="flex items-start">
                 <span className="text-accent mr-2 mt-1">
@@ -69,7 +59,17 @@ export default function About() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>{item}</span>
+                <span>
+                  {item.includes('online') ? (
+                    <>
+                      {item.split('online')[0]}
+                      <em>online</em>
+                      {item.split('online')[1]}
+                    </>
+                  ) : (
+                    item
+                  )}
+                </span>
               </li>
             ))}
           </ul>
@@ -78,8 +78,8 @@ export default function About() {
         <p className="leading-relaxed bg-gradient-to-r from-primary/10 to-transparent p-4 rounded-lg">
           Nossa atuação, presencial e remota, permite atender clientes em todo o
           Brasil, garantindo{' '}
-          <strong className="text-primary">perícia técnica online</strong> ou
-          presencial, com total segurança e compliance à{' '}
+          <strong className="text-primary">perícia <i>online</i></strong> ou
+          presencial, com total segurança e <i>compliance</i> à{' '}
           <strong className="text-primary">LGPD</strong>. Descubra como podemos
           ajudar a esclarecer questões complexas e proteger seus direitos com
           excelência técnica.

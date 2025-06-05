@@ -95,14 +95,14 @@ export default function Contact() {
                   target='_blank'
                 >
                   (11) 99940-5478
-                <Image
-                  src={whatsapp}
-                  alt="Whatsapp"
-                  width={20}
-                  height={20}
-                  className="mb-5"
-                  suppressHydrationWarning
-                />
+                  <Image
+                    src={whatsapp}
+                    alt="Whatsapp"
+                    width={20}
+                    height={20}
+                    className="mb-5"
+                    suppressHydrationWarning
+                  />
                 </a>
 
               </div>
@@ -138,44 +138,44 @@ export default function Contact() {
           </p>
         </div>
 
-      <div className="bg-card rounded-lg border border-border p-6 transition-all duration-300 shadow-md">
-        <h3 className="text-xl font-semibold mb-4">Solicite um Orçamento</h3>
-        <p className="mb-6">
-          Preencha o formulário abaixo e entraremos em contato em até 24
-          horas.
-        </p>
+        <div className="bg-card rounded-lg border border-border p-6 transition-all duration-300 shadow-md">
+          <h3 className="text-xl font-semibold mb-4">Solicite um Orçamento</h3>
+          <p className="mb-6">
+            Preencha o formulário abaixo e entraremos em contato em até 24
+            horas.
+          </p>
 
-        <form ref={form} onSubmit={sendEmail} className="space-y-4">
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Nome</label>
-            <input
-              type="text"
-              name="user_name"
-              required
-              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
-            />
-          </div>
+          <form ref={form} onSubmit={sendEmail} className="space-y-4">
+            <div className="flex flex-col">
+              <label className="text-sm font-medium mb-1">Nome</label>
+              <input
+                type="text"
+                name="user_name"
+                required
+                className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+              />
+            </div>
 
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Email</label>
-            <input
-              type="email"
-              name="user_email"
-              required
-              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
-            />
-          </div>
+            <div className="flex flex-col">
+              <label className="text-sm font-medium mb-1">Email</label>
+              <input
+                type="email"
+                name="user_email"
+                required
+                className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+              />
+            </div>
 
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">
-              Serviço de Interesse
-            </label>
-            <select 
-              name="service"
-              required
-              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
-            >
-              <option className="text-sm font-medium mb-1">
+            <div className="flex flex-col">
+              <label className="text-sm font-medium mb-1">
+                Serviço de Interesse
+              </label>
+              <select
+                name="service"
+                required
+                className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+              >
+                <option className="text-sm font-medium mb-1">
                   Selecione um serviço
                 </option>
                 <option>Grafotécnica & Documentoscopia</option>
@@ -186,27 +186,31 @@ export default function Contact() {
                 <option>Merceologia</option>
                 <option>Perícia Ambiental</option>
                 <option>Acidentes de Trânsito</option>
+                <option>Marcas e Patentes</option>
+                <option>Psicologia</option>
+                <option>Contratos</option>
+                <option>Inteligência Artificial</option>
                 <option>Outros</option>
-            </select>
-          </div>
+              </select>
+            </div>
 
-          <div className="flex flex-col">
-            <label className="text-sm font-medium mb-1">Mensagem</label>
-            <textarea 
-              name="message"
-              required
-              className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
-            ></textarea>
-          </div>
+            <div className="flex flex-col">
+              <label className="text-sm font-medium mb-1">Mensagem</label>
+              <textarea
+                name="message"
+                required
+                className="px-3 py-2 bg-zinc-100 border border-white/20 rounded-md"
+              ></textarea>
+            </div>
 
-          <Button 
-            type="submit"
-            className="bg-blue-950 hover:bg-amber-400 px-4 py-2 rounded-md transition-all duration-200 font-semibold w-full"
-          >
-            Enviar Solicitação
-          </Button>
-        </form>
-      </div>
+            <Button
+              type="submit"
+              className="bg-blue-950 hover:bg-amber-400 px-4 py-2 rounded-md transition-all duration-200 font-semibold w-full"
+            >
+              Enviar Solicitação
+            </Button>
+          </form>
+        </div>
       </div>
     </section>
   )
