@@ -26,8 +26,7 @@ export default function About() {
             Inspirada pela paixão por investigação e pelo compromisso com a{' '}
             <strong className="text-primary">verdade técnica</strong>, Deborah
             reuniu uma equipe multidisciplinar de peritos nas áreas mencionadas, e cada projeto é tratado com rigor, confidencialidade e agilidade —
-            assegurando resultados sólidos para processos judiciais,
-            corporativos e administrativos.
+            assegurando resultados sólidos para processos judiciais, criminais e trabalhistas, corporativos e administrativos.
           </p>
         </div>
 
@@ -39,7 +38,7 @@ export default function About() {
             {[
               'Atendimento e análises online',
               'Laudo pericial e parecer técnico de excelência e qualidade',
-              'Perícia grafotécnica no Brasil e América Latina.',
+              'Perícia no Brasil e América Latina.',
               'Perícia, consultoria e relatórios com entrega dentro do prazo',
               'Valores acessíveis e facilitados'
             ].map((item, index) => (
